@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="/js/app.js"></script>
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="game-container">
+      <header>
+        <button id="help">Help</button>
+        <h1>Guess the Word</h1>
+        <div class="settings">
+          <button id="video">Disable video</button>
+          <button id="audio">Disable audio</button>
+        </div>
+      </header>
+      <main>
+        <aside class="left-pannel">
+          <section class="instructions">
+            <h2>Instructions</h2>
+            <p>
+              Type any 5 letter words to guess the word. if the box is yellow
+              the letter is correct in the wrong place, if the box is green the
+              letter is correct in the right place.
+            </p>
+          </section>
+          <button id="reset">reset</button>
+        </aside>
+        <section class="game-board">
+          <div id="row">
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+          </div>
+          <div id="row">
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+          </div>
+          <div id="row">
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+          </div>
+          <div id="row">
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+          </div>
+          <div id="row">
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+            <div id="tile"></div>
+          </div>
+        </section>
+        <aside class="right-pannel">
+          <p>Video section</p>
+        </aside>
+      </main>
+      <section class="on-screen-keyboard">
+        <div class="keyboard-row">
+          <button>Q</button>
+          <button>W</button>
+          <button>E</button>
+          <button>R</button>
+          <button>T</button>
+          <button>Y</button>
+          <button>U</button>
+          <button>I</button>
+          <button>O</button>
+          <button>P</button>
+        </div>
+        <div class="keyboard-row">
+          <button>A</button>
+          <button>S</button>
+          <button>D</button>
+          <button>F</button>
+          <button>G</button>
+          <button>H</button>
+          <button>J</button>
+          <button>K</button>
+          <button>L</button>
+          <button>Enter</button>
+        </div>
+        <div class="keyboard-row">
+          <button>Z</button>
+          <button>X</button>
+          <button>C</button>
+          <button>V</button>
+          <button>B</button>
+          <button>N</button>
+          <button>M</button>
+          <button>Backspace</button>
+        </div>
+      </section>
+    </div>
+    <footer><a href="/references.html" target="_blank">References</a></footer>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --background: #FFF7F1;
+    --text: #1A0D3F;
+    --primary: #DB3801;
+    --secondary: #6C00DB;
+    --accent: #F4AE29;
+    --dark-background: #1A0D3F;
+    --dark-text: #FFF7F1;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Shantell Sans", cursive;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 10px;
+}
