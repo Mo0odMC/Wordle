@@ -8,14 +8,194 @@
     --accent: #F4AE29;
     --dark-background: #1A0D3F;
     --dark-text: #FFF7F1;
+    --correct: #538D4E;
+    --present: #B59F3B;
+    --absent: #787C7E;
+    --border: #B8AEC5;
+    --tile: #FFFFFF;
 }
 *{
     box-sizing: border-box;
 }
-body{
+body {
     margin: 0;
     font-family: "Shantell Sans", cursive;
     background-color: var(--background);
     color: var(--text);
     padding: 10px;
+}
+button {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: var(--dark-text);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: var(--secondary);
+}
+.game-container {
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    padding: 25px;
+    min-height: 90vh;
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+}
+.title {
+    text-align: center;
+}
+
+#message {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px 0;
+    min-height: 30px;
+}
+
+#help {
+    justify-self: start;
+}
+
+.settings {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.instructions {
+    background-color: var(--tile);
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.instructions h2 {
+    margin-top: 0;
+}
+
+.instructions p {
+    line-height: 1.6;
+}
+
+#reset {
+    width: 150px;
+    margin-top: 20px;
+}
+/* gameboard */
+.game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.game-board > div {
+    display: grid;
+    grid-template-columns: repeat(5, 70px);
+    gap: 8px;
+}
+
+.game-board > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: var(--tile);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.right-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--tile);
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    min-height: 382px;
+    padding: 15px;
+}
+/* correct letter correct position */
+.game-board .correct,
+.keyboard-row button.correct {
+    background-color: var(--correct);
+    border-color: var(--correct);
+    color: var(--dark-text);
+}
+/* correct letter wrong position */
+.game-board .present,
+.keyboard-row button.present {
+    background-color: var(--present);
+    border-color: var(--present);
+    color: var(--dark-background);
+}
+/* incorrect letter */
+.game-board .absent,
+.keyboard-row button.absent {
+    background-color: var(--absent);
+    border-color: var(--absent);
+    color: var(--dark-text);
+}
+.on-screen-keyboard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0 auto;
+  border: 2px solid var(--border);
+  border-radius: 25px;
+  padding: 20px;
+}
+.keyboard-row{
+    display: flex;
+    gap: 6px;
+}
+.keyboard-row button{
+    min-width: 45px;
+    height: 50px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
