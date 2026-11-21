@@ -46,7 +46,7 @@ function start() {
   keys.forEach((key) => {
     key.classList.remove("correct", "present", "absent");
   });
-  console.log(answer);
+  // console.log(answer);
 }
 
 //handling input
