@@ -119,31 +119,38 @@ main {
 
 .game-board > div {
     display: grid;
-    grid-template-columns: repeat(5, 70px);
-    gap: 8px;
+    grid-template-columns: repeat(5, 9vh);
+    gap: 6px;
 }
 
 .game-board > div > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 9vh;
+    height: 9vh;
     background-color: var(--tile);
     border: 2px solid var(--border);
     border-radius: 12px;
-    font-size: 32px;
+    font-size: 26px;
     font-weight: bold;
 }
 .right-panel {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 48vh;
     background-color: var(--tile);
     border: 2px solid var(--border);
     border-radius: 25px;
-    min-height: 382px;
-    padding: 15px;
+    padding: 10px;
+}
+.right-panel iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 1vw;
 }
 /* correct letter correct position */
 .game-board .correct,
@@ -166,23 +173,28 @@ main {
     border-color: var(--absent);
     color: var(--dark-text);
 }
-.on-screen-keyboard{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  margin: 0 auto;
-  border: 2px solid var(--border);
-  border-radius: 25px;
-  padding: 20px;
+.on-screen-keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    border: 2px solid var(--border);
+    border-radius: 25px;
+    padding: 8px;
 }
-.keyboard-row{
+.keyboard-row {
     display: flex;
     gap: 6px;
+    width: 100%;
 }
 .keyboard-row button{
-    min-width: 45px;
-    height: 50px;
+    flex: 1;
+    min-width: 0;
+    height: 5vh;
+    padding: 4px;
+}
+.keyboard-row button:last-child {
+    flex: 1.5;
 }
 
 /* footer */
@@ -198,4 +210,10 @@ footer a {
 
 footer a:hover {
     text-decoration: underline;
+}
+
+
+/* Darken audio button when music is playing */
+#audio.playing {
+    background-color: var(--dark-background);
 }

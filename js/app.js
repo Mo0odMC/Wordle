@@ -6,14 +6,16 @@ const instructions = document.querySelector(".instructions");
 const reset = document.querySelector("#reset");
 const help = document.querySelector("#help");
 const video = document.querySelector("#video");
+const player = document.querySelector("#player");
 const audio = document.querySelector("#audio");
+const music = document.querySelector("#music");
 const message = document.querySelector("#message");
 
 //-----------------------------Constants-------------------------------------
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 const maxGuesses = 5;
 const wordLength = 5;
-
+const videos = ["B_5Gve6UIhg", "74voi0vlxHE", "0c4KWfPhgWA"];
 //------------------------------Variables----------------------------------------
 
 let words = [];
@@ -22,6 +24,7 @@ let answer;
 let guess;
 let row;
 let finished = true;
+let videoIndex = 0;
 
 //---------------------------------functions-----------------------------
 function start() {
@@ -170,6 +173,23 @@ function toggleHelp() {
     instructions.style.visibility = "hidden";
   }
 }
+function changeVideo() {
+  videoIndex++;
+  if (videoIndex === videos.length) {
+    videoIndex = 0;
+  }
+  player.src =
+    "https://www.youtube.com/embed/" +
+    videos[videoIndex] +
+    "?autoplay=1&mute=1";
+}
+function toggleAudio() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
+}
 //---------------------Event listeners---------------------
 
 reset.addEventListener("click", start);
@@ -186,6 +206,14 @@ keyboard.addEventListener("click", (event) => {
   if (event.target.tagName === "BUTTON") {
     handleKey(event.target.textContent.toLowerCase());
   }
+});
+video.addEventListener("click", changeVideo);
+audio.addEventListener("click", toggleAudio);
+music.addEventListener("play", () => {
+  audio.classList.add("playing");
+});
+music.addEventListener("pause", () => {
+  audio.classList.remove("playing");
 });
 
 //------------------Load JSON---------------------------

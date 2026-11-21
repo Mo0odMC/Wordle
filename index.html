@@ -17,8 +17,8 @@
           <p id="message">Guess the five-letter word!</p>
         </div>
         <div class="settings">
-          <button id="video">Disable video</button>
-          <button id="audio">Disable audio</button>
+          <button id="video">Change video</button>
+          <button id="audio">Toggle audio</button>
         </div>
       </header>
       <main>
@@ -34,44 +34,45 @@
           <button id="reset">reset</button>
         </aside>
         <section class="game-board">
-          <div id="row">
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
+          <div class="row">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
           </div>
-          <div id="row">
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
+          <div class="row">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
           </div>
-          <div id="row">
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
+          <div class="row">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
           </div>
-          <div id="row">
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
+          <div class="row">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
           </div>
-          <div id="row">
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
-            <div id="tile"></div>
+          <div class="row">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
           </div>
         </section>
         <aside class="right-panel">
           <iframe
+            id="player"
             autoplay="true"
             width="350"
             height="350"
@@ -121,5 +122,11 @@
       </section>
     </div>
     <footer><a href="/references.html" target="_blank">References</a></footer>
+    <audio
+      id="music"
+      src="https://archive.org/download/soundcloud-177671751/Alan_Walker_-_Fade_NCS_Release-177671751.mp3"
+      loop
+      preload="auto"
+    ></audio>
   </body>
 </html>
