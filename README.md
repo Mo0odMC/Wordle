@@ -10,6 +10,7 @@ This is my first attempt creating the game wordle
 ### Game Description
 
 This game is a game tests your knowledge on 5 letter words. Guess the correct word to win!.
+<img width="1917" height="905" alt="image" src="https://github.com/user-attachments/assets/ac5cebd1-ee21-46a2-9a2a-0248a3eb0b9d" />
 
 ### Sprint 1
 
