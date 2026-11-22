@@ -10,6 +10,7 @@ const player = document.querySelector("#player");
 const audio = document.querySelector("#audio");
 const music = document.querySelector("#music");
 const message = document.querySelector("#message");
+const hideVideo = document.querySelector("#hide-video");
 
 //-----------------------------Constants-------------------------------------
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -190,11 +191,23 @@ function toggleAudio() {
     music.pause();
   }
 }
+//hide video
+function toggleVideo() {
+  if (player.style.visibility === "hidden") {
+    player.style.visibility = "visible";
+    hideVideo.textContent = "Show Video";
+  } else {
+    player.style.visibility = "hidden";
+    hideVideo.textContent = "Hide Video";
+  }
+}
 //---------------------Event listeners---------------------
 
 reset.addEventListener("click", start);
 
 help.addEventListener("click", toggleHelp);
+
+hideVideo.addEventListener("click", toggleVideo);
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === "Backspace") {

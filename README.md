@@ -4,13 +4,29 @@ This is my first attempt creating the game wordle
 
 ## Project Planning
 
+Check my planned functions here
+
 - [Project board](https://github.com/users/Mo0odMC/projects/2)
+
   <img width="1272" height="720" alt="wireframe" src="https://github.com/user-attachments/assets/6e91372a-a02d-4629-a342-fdfc51922711" />
 
 ### Game Description
 
 This game is a game tests your knowledge on 5 letter words. Guess the correct word to win!.
-<img width="1917" height="905" alt="image" src="https://github.com/user-attachments/assets/ac5cebd1-ee21-46a2-9a2a-0248a3eb0b9d" />
+<img width="1917" height="905" alt="game preview" src="https://github.com/user-attachments/assets/ac5cebd1-ee21-46a2-9a2a-0248a3eb0b9d" />
+
+### Instructions to play the game
+
+1. Type any five letter words to start.
+2. Any **green** boxes means you guessed the right letter in the right place.
+3. Any **yellow** boxes means you guessed a right letter in the wrong box.
+4. You **win** if you guess the correct word **before** five guesses.
+5. You **lose** if you cannot guess the correct word after your fifth try.
+6. Have fun!.
+
+### Why I chose to make this game
+
+I chose this game to challenge myself with something new. Mainly was to learn how to use a json file with my js code. Ended up learning more CSS than I would like.
 
 ### Sprint 1
 
