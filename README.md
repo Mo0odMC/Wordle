@@ -28,6 +28,12 @@ This game is a game tests your knowledge on 5 letter words. Guess the correct wo
 
 I chose this game to challenge myself with something new. Mainly was to learn how to use a json file with my js code. Ended up learning more CSS than I would like.
 
+### Languages Used
+
+1. HTML
+2. CSS
+3. JavaScript
+
 ### Sprint 1
 
 Goal: Finish implemented the basics of the game, including the HTML, CSS and the javascript to meet the Minimum Viable Product (MVP).
