@@ -217,3 +217,14 @@ footer a:hover {
 #audio.playing {
     background-color: var(--dark-background);
 }
+
+.help-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    white-space: nowrap;
+}
+#timer {
+    margin: 0;
+}

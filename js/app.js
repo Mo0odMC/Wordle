@@ -11,12 +11,14 @@ const audio = document.querySelector("#audio");
 const music = document.querySelector("#music");
 const message = document.querySelector("#message");
 const hideVideo = document.querySelector("#hide-video");
+const timerEL = document.querySelector("#timer");
 
 //-----------------------------Constants-------------------------------------
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
 const maxGuesses = 5;
 const wordLength = 5;
 const videos = ["B_5Gve6UIhg", "74voi0vlxHE", "0c4KWfPhgWA"];
+
 //------------------------------Variables----------------------------------------
 
 let words = [];
@@ -26,6 +28,7 @@ let guess;
 let row;
 let finished = true;
 let videoIndex = 0;
+let startTime = Date.now();
 
 //---------------------------------functions-----------------------------
 function start() {
@@ -38,6 +41,7 @@ function start() {
   row = 0;
   finished = false;
   message.textContent = "Guess the five-letter word!";
+  startTime = Date.now();
 
   tiles.forEach((tile) => {
     tile.textContent = "";
@@ -71,6 +75,23 @@ function handleKey(key) {
   ) {
     guess += key;
     render();
+  }
+}
+
+function updateTimer() {
+  if (finished) {
+    return;
+  }
+  const elapsed = Math.floor((Date.now() - startTime) / 1000);
+  const seconds = elapsed % 60;
+  const mintues = Math.floor(elapsed / 60) % 60;
+  const hours = Math.floor(elapsed / 3600);
+  if (hours > 0) {
+    timerEL.textContent = `Time passed: ${hours}h ${mintues}m ${seconds}s`;
+  } else if (mintues > 0) {
+    timerEL.textContent = `Time passed: ${mintues}m ${seconds}s`;
+  } else {
+    timerEL.textContent = `Time passed: ${seconds}s`;
   }
 }
 
@@ -151,6 +172,7 @@ function updateKey(letter, result) {
 //check win or loss
 function checkWinner() {
   if (guess === answer) {
+    updateTimer();
     finished = true;
     message.textContent = "Congratulations! You won!";
     return;
@@ -228,6 +250,8 @@ music.addEventListener("play", () => {
 music.addEventListener("pause", () => {
   audio.classList.remove("playing");
 });
+
+setInterval(updateTimer, 1000);
 
 //------------------Load JSON---------------------------
 
