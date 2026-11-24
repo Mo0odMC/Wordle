@@ -10,6 +10,8 @@ Check my planned functions here
 
   <img width="1272" height="720" alt="wireframe" src="https://github.com/user-attachments/assets/6e91372a-a02d-4629-a342-fdfc51922711" />
 
+### Play the game here on github: [Wordle](https://mo0odmc.github.io/Wordle/)
+
 ### Game Description
 
 This game is a game tests your knowledge on 5 letter words. Guess the correct word to win!.

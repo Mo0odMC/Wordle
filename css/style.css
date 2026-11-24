@@ -14,6 +14,20 @@
     --border: #B8AEC5;
     --tile: #FFFFFF;
 }
+body.dark-mode {
+    --background: #1A0D3F;
+    --text: #FFF7F1;
+    --tile: #302450;
+    --primary: #C83300;
+    --border: #7C6E9D;
+    --correct: #3F783B;
+    --present: #988329;
+    --absent: #60666B;
+}
+body.dark-mode #message,
+body.dark-mode footer a {
+    color: var(--accent);
+}
 *{
     box-sizing: border-box;
 }

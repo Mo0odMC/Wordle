@@ -12,6 +12,7 @@ const music = document.querySelector("#music");
 const message = document.querySelector("#message");
 const hideVideo = document.querySelector("#hide-video");
 const timerEL = document.querySelector("#timer");
+const dark = document.querySelector("#dark");
 
 //-----------------------------Constants-------------------------------------
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -223,6 +224,15 @@ function toggleVideo() {
     hideVideo.textContent = "Hide Video";
   }
 }
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    dark.textContent = "Light Mode";
+  } else {
+    dark.textContent = "Dark Mode";
+  }
+}
 //---------------------Event listeners---------------------
 
 reset.addEventListener("click", start);
@@ -252,6 +262,7 @@ music.addEventListener("pause", () => {
 });
 
 setInterval(updateTimer, 1000);
+dark.addEventListener("click", toggleTheme);
 
 //------------------Load JSON---------------------------
 
