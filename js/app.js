@@ -218,10 +218,10 @@ function toggleAudio() {
 function toggleVideo() {
   if (player.style.visibility === "hidden") {
     player.style.visibility = "visible";
-    hideVideo.textContent = "Show Video";
+    hideVideo.textContent = "Hide Video";
   } else {
     player.style.visibility = "hidden";
-    hideVideo.textContent = "Hide Video";
+    hideVideo.textContent = "Show Video";
   }
 }
 function toggleTheme() {
