@@ -229,7 +229,7 @@ footer a:hover {
 
 /* Darken audio button when music is playing */
 #audio.playing {
-    background-color: var(--dark-background);
+    background-color: var(--secondary);
 }
 
 .help-container {

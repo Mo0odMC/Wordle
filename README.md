@@ -8,14 +8,14 @@ Check my planned functions here
 
 - [Project board](https://github.com/users/Mo0odMC/projects/2)
 
-  <img width="1272" height="720" alt="wireframe" src="https://github.com/user-attachments/assets/6e91372a-a02d-4629-a342-fdfc51922711" />
+<img width="1272" height="720" alt="wireframe" src="https://github.com/user-attachments/assets/6e91372a-a02d-4629-a342-fdfc51922711" />
 
 ### Play the game here on github: [Wordle](https://mo0odmc.github.io/Wordle/)
 
 ### Game Description
 
 This game is a game tests your knowledge on 5 letter words. Guess the correct word to win!.
-<img width="1917" height="905" alt="game preview" src="https://github.com/user-attachments/assets/ac5cebd1-ee21-46a2-9a2a-0248a3eb0b9d" />
+<img width="1917" height="912" alt="game-preview" src="https://github.com/user-attachments/assets/1242a4fb-b483-4791-a6aa-68fb029dd1d3" />
 
 ### Instructions to play the game
 
@@ -49,6 +49,12 @@ Goal: Add Quality Of Life (QOL) implementations to make the game more appealing.
 
 Start: [21-Nov-2026]
 End: [24-Nov-2026]
+
+## Future plans
+
+- Remove the box when the video is removed
+- Add dopamine effect to your wins
+- Add a leaderboard
 
 ## References & Credits
 
